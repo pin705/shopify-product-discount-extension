@@ -1,0 +1,28 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "0b4027607dcfd7d34f166571c30ddc0c"
+name = "demo-discount"
+application_url = "https://sacrifice-nursery-yours-coast.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "pinn-dev-store.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_discounts"
+
+[auth]
+redirect_urls = [
+  "https://sacrifice-nursery-yours-coast.trycloudflare.com/auth/callback",
+  "https://sacrifice-nursery-yours-coast.trycloudflare.com/auth/shopify/callback",
+  "https://sacrifice-nursery-yours-coast.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-01"
+
+[pos]
+embedded = false
